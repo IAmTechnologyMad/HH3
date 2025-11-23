@@ -23,12 +23,12 @@ const (
 	// pages to scan (will stop early if a page has no products)
 	MAX_PAGES            = 20
 	WORKERS              = 5
-	CHECK_INTERVAL_SECS  = 60 // default check interval (seconds)
+	CHECK_INTERVAL_SECS  = 90 // default check interval (seconds)
 	TELEGRAM_BOT_TOKEN   = "8200088959:AAEv05nLhbWyDGgzbeBN3c-5ersoQ1qanbc"
 	TELEGRAM_CHAT_ID     = "-4829790733" // channel/chat to send new item alerts
 	ADMIN_CHAT_ID        = "837428747"   // admin control
 	SEEN_ITEMS_FILE_FUNC = "seen_funcorp.txt"
-	APP_KEEPALIVE_URL    = "https://hh-mvnn.onrender.com" // adjust if needed
+	APP_KEEPALIVE_URL    = "https://hh3.onrender.com" 
 )
 
 // ---------------- Shared state ----------------
@@ -677,3 +677,4 @@ func main() {
 	<-stop
 	log.Println("--- Bot has been shut down. ---")
 }
+
