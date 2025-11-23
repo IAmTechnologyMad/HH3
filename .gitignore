@@ -1,0 +1,12 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Runtime data
+seen_funcorp.txt
+
+# OS specific
+.DS_Store
+Thumbs.db
