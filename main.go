@@ -600,16 +600,13 @@ func startKeepAlive() {
 			log.Printf("⚠️ Initial ping failed: %v", err)
 		}
 
-		for {
-			select {
-			case <-ticker.C:
-				resp, err := client.Get(APP_KEEPALIVE_URL + "/ping")
-				if err != nil {
-					log.Printf("⚠️ Keep-alive ping failed: %v", err)
-				} else {
-					resp.Body.Close()
-					log.Printf("✅ Keep-alive ping successful (status: %d)", resp.StatusCode)
-				}
+		for range ticker.C {
+			resp, err := client.Get(APP_KEEPALIVE_URL + "/ping")
+			if err != nil {
+				log.Printf("⚠️ Keep-alive ping failed: %v", err)
+			} else {
+				resp.Body.Close()
+				log.Printf("✅ Keep-alive ping successful (status: %d)", resp.StatusCode)
 			}
 		}
 	}()
