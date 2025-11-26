@@ -24,7 +24,7 @@ const (
 	MAX_PAGES            = 20
 	WORKERS              = 5
 	CHECK_INTERVAL_SECS  = 90 // default check interval (seconds)
-	TELEGRAM_BOT_TOKEN   = "8200088959:AAEv05nLhbWyDGgzbeBN3c-5ersoQ1qanbc"
+	TELEGRAM_BOT_TOKEN   = "8336369415:AAE7idSEyOpMIUlYhL4z9yze0C4_6rdbzE4"
 	TELEGRAM_CHAT_ID     = "-4829790733" // channel/chat to send new item alerts
 	ADMIN_CHAT_ID        = "837428747"   // admin control
 	SEEN_ITEMS_FILE_FUNC = "seen_funcorp.txt"
@@ -677,4 +677,5 @@ func main() {
 	<-stop
 	log.Println("--- Bot has been shut down. ---")
 }
+
 
